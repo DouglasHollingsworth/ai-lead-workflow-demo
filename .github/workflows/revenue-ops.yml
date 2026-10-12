@@ -7,6 +7,9 @@ on:
     paths:
       - 'revenue-ops.js'
       - 'revenue-ops.css'
+      - 'ceo-operations.js'
+      - 'ceo-operations.css'
+      - 'tests/ceo-operations.test.cjs'
       - 'index.html'
       - 'tests/revenue-ops.test.cjs'
       - '.github/workflows/revenue-ops.yml'
@@ -26,5 +29,6 @@ jobs:
         run: |
           node --check app.js
           node --check revenue-ops.js
+          node --check ceo-operations.js
       - name: Run revenue review integration smoke tests
-        run: node --test tests/revenue-ops.test.cjs
+        run: node --test tests/*.test.cjs
