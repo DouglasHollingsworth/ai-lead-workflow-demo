@@ -1,0 +1,25 @@
+/* CEO daily planning simulator, scoped to the existing revenue pilot */
+.ceo-pilot{margin-top:22px}
+.ceo-goal{display:grid;grid-template-columns:1fr auto;align-items:end;gap:12px}
+.ceo-goal label{min-width:0}
+.ceo-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:20px 0}
+.ceo-counters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;flex:1}
+.ceo-counters>div{background:#0a151e;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:13px}
+.ceo-counters span{display:block;color:#8da0af;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.ceo-counters strong{display:block;font-size:1.5rem;font-variant-numeric:tabular-nums}
+.ceo-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ceo-module{min-width:0;background:#0a151e;border-radius:17px;padding:19px;border:1px solid rgba(255,255,255,.07)}
+.ceo-module h3,.ceo-report h3{margin:0 0 10px;font-size:1.12rem}
+.ceo-task-list{padding:0;list-style:none;margin:14px 0}
+.ceo-task-list li{border:1px solid rgba(142,240,139,.13);border-radius:12px;padding:12px;margin-bottom:8px}
+.ceo-task-list li strong{display:block;font-size:.92rem}
+.ceo-task-list li span{display:block;color:#94a8b8;font-size:.8rem;margin-top:5px}
+.ceo-module label{display:grid;gap:7px;margin-top:14px}
+.ceo-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0}
+.ceo-actions button:disabled{cursor:not-allowed;opacity:.38}
+.ceo-report{background:#0a151e;border:1px solid rgba(142,240,139,.14);border-radius:15px;padding:17px;margin-top:18px}
+.ceo-report-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ceo-report p{margin-bottom:0}
+.ceo-note{margin-top:14px;font-size:.77rem}
+@media(max-width:900px){.ceo-columns{grid-template-columns:1fr}.ceo-top{align-items:stretch;flex-direction:column}}
+@media(max-width:600px){.ceo-goal{grid-template-columns:1fr}.ceo-counters{grid-template-columns:repeat(2,minmax(0,1fr))}.ceo-counters strong{font-size:1.2rem}}
