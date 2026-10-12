@@ -1,0 +1,25 @@
+/* Revenue Operations Pilot — scoped addition to the existing dashboard */
+.ops-pilot{margin-top:22px}
+.ops-muted{font-size:.88rem;color:#97aab8;line-height:1.6}
+.ops-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:19px 0 22px}
+.ops-metrics>div{background:#0a151e;border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:17px}
+.ops-metrics span{display:block;color:#8da0af;font-size:.73rem;text-transform:uppercase;letter-spacing:.08em}
+.ops-metrics strong{font-size:1.8rem;display:block;margin-top:5px;font-variant-numeric:tabular-nums}
+.ops-cols{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
+.ops-box{background:#0a151e;border:1px solid rgba(255,255,255,.07);border-radius:17px;padding:19px;min-width:0}
+.ops-box h3{margin:0 0 15px;font-size:1.12rem}
+.ops-box-head{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.ops-box-head h3{margin:0}
+.ops-queue{padding:0;margin:17px 0 0;list-style:none}
+.ops-queue li{padding:14px;border:1px solid rgba(142,240,139,.11);background:rgba(142,240,139,.03);border-radius:12px;margin-bottom:9px}
+.ops-queue strong{display:block;font-size:.88rem;color:#e8f1f6}
+.ops-queue span{display:block;margin-top:5px;color:#849cac;font-size:.8rem}
+.ops-box label{display:grid;margin:11px 0 0;gap:7px}
+.ops-box label>select,.ops-box input,.ops-box textarea{width:100%}
+.ops-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ops-box #opsSave{margin-top:14px}
+.ops-footer{border-top:1px solid rgba(255,255,255,.07);padding-top:17px;margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.ops-footer span{color:#8da0af;font-size:.8rem}
+.ops-footer strong{font-size:.8rem}
+@media(max-width:860px){.ops-cols{grid-template-columns:1fr}}
+@media(max-width:600px){.ops-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.ops-metrics strong{font-size:1.25rem}.ops-two{grid-template-columns:1fr}.ops-box-head{align-items:flex-start;flex-direction:column}.ops-footer{align-items:stretch}.ops-footer button{width:100%}}

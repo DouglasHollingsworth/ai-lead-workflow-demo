@@ -1,0 +1,34 @@
+name: Revenue Operations Pilot Tests
+
+on:
+  push:
+    branches: [feature/revenue-ops-pilot-20261012]
+  pull_request:
+    paths:
+      - 'revenue-ops.js'
+      - 'revenue-ops.css'
+      - 'ceo-operations.js'
+      - 'ceo-operations.css'
+      - 'tests/ceo-operations.test.cjs'
+      - 'index.html'
+      - 'tests/revenue-ops.test.cjs'
+      - '.github/workflows/revenue-ops.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JS syntax
+        run: |
+          node --check app.js
+          node --check revenue-ops.js
+          node --check ceo-operations.js
+      - name: Run revenue review integration smoke tests
+        run: node --test tests/*.test.cjs
